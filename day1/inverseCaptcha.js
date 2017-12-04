@@ -1,5 +1,5 @@
-inverseCaptcha = (input) => {
-    const numbers = getArrayOfNumbers(input);
+inverseCaptcha = (stringOfNumbers) => {
+    const numbers = stringOfNumbers.split('');
     let answer = 0;
     
     numbers.forEach((num, index) => {
@@ -11,11 +11,7 @@ inverseCaptcha = (input) => {
     });
 
     return answer;
-    
-    function getArrayOfNumbers(numbers) {
-        return ("" + numbers).split('')
-    }
-	
+    	
 	function isLast(index) {
 		return index === numbers.length - 1;
 	}
